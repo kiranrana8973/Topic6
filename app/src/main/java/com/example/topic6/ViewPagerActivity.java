@@ -28,6 +28,8 @@ public class ViewPagerActivity extends AppCompatActivity {
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
+
+        //int a;
     }
 }
 
