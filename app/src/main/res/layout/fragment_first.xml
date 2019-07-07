@@ -28,5 +28,13 @@
         android:text="Calculate"
         android:layout_margin="10dp"
         />
+    <TextView
+        android:id="@+id/tvOutput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Second number"
+        android:gravity="center"
+        android:layout_margin="10dp"
+        />
 </LinearLayout>
 

@@ -8,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.topic6.R;
@@ -19,7 +20,7 @@ public class FirstFragment extends Fragment implements View.OnClickListener {
 
     private Button btnCalculate;
     private EditText etFirst, etSecond;
-
+    private TextView tvOutput;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class FirstFragment extends Fragment implements View.OnClickListener {
 
         etFirst = view.findViewById(R.id.etFirst);
         etSecond = view.findViewById(R.id.etSecond);
+        tvOutput = view.findViewById(R.id.tvOutput);
         btnCalculate = view.findViewById(R.id.btnCalculate);
 
         btnCalculate.setOnClickListener(this);
@@ -41,5 +43,6 @@ public class FirstFragment extends Fragment implements View.OnClickListener {
         int result = first + second;
 
         Toast.makeText(getActivity(), "Sum is : " + result, Toast.LENGTH_SHORT).show();
+        tvOutput.setText(Integer.toString(result));
     }
 }
